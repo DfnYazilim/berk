@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AnaSayfaComponent } from './ana-sayfa/ana-sayfa.component';
 import {FormsModule} from "@angular/forms";
+import { SatislarComponent } from './satislar/satislar.component';
+import { MusterilerComponent } from './musteriler/musteriler.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    AnaSayfaComponent
+    AnaSayfaComponent,
+    SatislarComponent,
+    MusterilerComponent
   ],
   imports: [
     BrowserModule,

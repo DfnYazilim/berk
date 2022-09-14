@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-navbar',
@@ -10,12 +11,12 @@ export class NavbarComponent implements OnInit {
   secili = ""
 
   tuslar = [
-    {name: "Anasayfa", class: 'btn btn-secondary'},
-    {name: "Müşteriler", class: 'btn btn-success'},
-    {name: "Satışlar", class: 'btn btn-outline-danger'},
+    {name: "Anasayfa", class: 'btn btn-secondary',link: 'anasayfa'},
+    {name: "Müşteriler", class: 'btn btn-success', link:  'musteriler'},
+    {name: "Satışlar", class: 'btn btn-outline-danger', link:  'satislar'},
   ]
 
-  constructor() {
+  constructor(private router : Router) {
   }
 
   ngOnInit(): void {
@@ -23,11 +24,12 @@ export class NavbarComponent implements OnInit {
 
 
   sec(a: any) {
-    this.secili = a.name
+    console.log(a)
+    this.router.navigateByUrl(a.link)
   }
 
   ekle() {
-    this.tuslar.push({name: this.secili, class: 'btn btn-secondary'})
+    this.tuslar.push({name: this.secili, class: 'btn btn-secondary',link:''})
     this.secili = ""
   }
 }

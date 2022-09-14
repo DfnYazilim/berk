@@ -1,0 +1,29 @@
+
+<table class="table table-bordered">
+  <tr>
+    <th>ID</th>
+    <th>Ad</th>
+    <th>Tel</th>
+  </tr>
+  <tr *ngFor="let a of data">
+    <td>{{a.id}}</td>
+    <td>{{a.name}}</td>
+    <td>{{a.gsm}}</td>
+  </tr>
+
+</table>
+<div>
+  <div class="from-group">
+    <label for="id">ID</label>
+    <input type="number" class="form-control" [(ngModel)]="yeniId">
+  </div>
+  <div class="from-group">
+    <label for="id">Ad</label>
+    <input type="text" class="form-control" [(ngModel)]="yeniIsim">
+  </div>
+  <div class="from-group">
+    <label for="id">Tel</label>
+    <input type="text" class="form-control" [(ngModel)]="yeniTel">
+  </div>
+</div>
+<button (click)="ekle()">Yeni Ekle</button>
