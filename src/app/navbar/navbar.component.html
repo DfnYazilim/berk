@@ -1,0 +1,11 @@
+<!--<button class="btn btn-secondary" (click)="rota()">{{tus1}}</button>-->
+<!--<button class="btn btn-success">{{tus2}}</button>-->
+<!--<button class="btn btn-outline-danger">{{tus3}}</button>-->
+
+<br>
+<button class="{{a.class}}" *ngFor="let a of tuslar" (click)="sec(a)">{{a.name}}</button>
+<br>
+<input type="text" [(ngModel)]="secili">
+<button class="btn btn-danger" (click)="ekle()">Yeni tuş ekle</button>
+<br>
+<!--{{secili}}-->
